@@ -3,7 +3,6 @@
 //
 
 #include <iostream>
-#include <string>
 #include "Poco/Net/HTTPServerRequestImpl.h"
 #include "Poco/Net/HTTPServerResponse.h"
 #include "Poco/Net/MediaType.h"
@@ -22,7 +21,7 @@ void GetHandler(Poco::Net::HTTPServerRequest& request, Poco::Net::HTTPServerResp
   Poco::URI uri(request.getURI());
   std::string query = uri.getQuery();
 
-  std::cout << uri.getQuery() << std::endl;
+  std::cout << query << std::endl;
 
   os.flush();
 }
